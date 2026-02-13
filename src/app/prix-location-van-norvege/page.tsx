@@ -8,12 +8,12 @@ export const metadata: Metadata = {
   title: 'Prix Location Van Norvège : Tarifs et Budget Complet',
   description: 'Découvrez les prix de location de van en Norvège : tarifs par saison, assurances, caution, péages et ferries. Budget complet pour votre road trip.',
   alternates: {
-    canonical: 'https://explorenorwayvan.com/prix-location-van-norvege',
+    canonical: 'https://www.explorenorwayvan.com/prix-location-van-norvege',
   },
   openGraph: {
     title: 'Prix Location Van Norvège : Tarifs et Budget Complet',
     description: 'Tarifs de location van en Norvège, assurances, caution et budget complet pour votre road trip.',
-    url: 'https://explorenorwayvan.com/prix-location-van-norvege',
+    url: 'https://www.explorenorwayvan.com/prix-location-van-norvege',
   },
 };
 

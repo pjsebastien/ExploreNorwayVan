@@ -9,12 +9,12 @@ export const metadata: Metadata = {
   title: 'Location Van Oslo : Loueurs, Prix et Conseils',
   description: 'Location de van à Oslo : découvrez les meilleurs loueurs, les tarifs, les conseils pratiques et les itinéraires au départ de la capitale norvégienne.',
   alternates: {
-    canonical: 'https://explorenorwayvan.com/location-van-oslo',
+    canonical: 'https://www.explorenorwayvan.com/location-van-oslo',
   },
   openGraph: {
     title: 'Location Van Oslo : Loueurs, Prix et Conseils',
     description: 'Tout savoir pour louer un van à Oslo : loueurs, tarifs et itinéraires.',
-    url: 'https://explorenorwayvan.com/location-van-oslo',
+    url: 'https://www.explorenorwayvan.com/location-van-oslo',
   },
 };
 

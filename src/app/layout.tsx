@@ -6,7 +6,7 @@ import CookieBanner from "@/components/CookieBanner";
 import FloatingCTA from "@/components/FloatingCTA";
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://explorenorwayvan.com'),
+  metadataBase: new URL('https://www.explorenorwayvan.com'),
   title: {
     default: 'Location van Norvège | ExploreNorwayVan',
     template: '%s | ExploreNorwayVan',
@@ -24,7 +24,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     locale: 'fr_FR',
-    url: 'https://explorenorwayvan.com',
+    url: 'https://www.explorenorwayvan.com',
     siteName: 'ExploreNorwayVan',
     title: 'Location van Norvège',
     description: 'Louez un van aménagé en Norvège et explorez les fjords en toute liberté.',
@@ -55,7 +55,7 @@ export const metadata: Metadata = {
     },
   },
   alternates: {
-    canonical: 'https://explorenorwayvan.com',
+    canonical: 'https://www.explorenorwayvan.com',
   },
   icons: {
     icon: '/images/favicon-location-van-norvege.png',

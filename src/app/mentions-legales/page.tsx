@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   title: 'Mentions Légales',
   description: 'Mentions légales du site ExploreNorwayVan.com - Informations sur l\'éditeur, l\'hébergeur et les conditions d\'utilisation.',
   alternates: {
-    canonical: 'https://explorenorwayvan.com/mentions-legales',
+    canonical: 'https://www.explorenorwayvan.com/mentions-legales',
   },
   robots: {
     index: false,

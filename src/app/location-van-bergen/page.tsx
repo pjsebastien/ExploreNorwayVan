@@ -9,12 +9,12 @@ export const metadata: Metadata = {
   title: 'Location Van Bergen : La Porte des Fjords',
   description: 'Location de van à Bergen : découvrez les loueurs, les tarifs et pourquoi Bergen est le point de départ idéal pour explorer les fjords norvégiens.',
   alternates: {
-    canonical: 'https://explorenorwayvan.com/location-van-bergen',
+    canonical: 'https://www.explorenorwayvan.com/location-van-bergen',
   },
   openGraph: {
     title: 'Location Van Bergen : La Porte des Fjords',
     description: 'Louez un van à Bergen et plongez immédiatement au cœur des fjords.',
-    url: 'https://explorenorwayvan.com/location-van-bergen',
+    url: 'https://www.explorenorwayvan.com/location-van-bergen',
   },
 };
 

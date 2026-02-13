@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   title: 'Politique de Confidentialité',
   description: 'Politique de confidentialité du site ExploreNorwayVan.com - Protection des données personnelles et utilisation des cookies.',
   alternates: {
-    canonical: 'https://explorenorwayvan.com/politique-confidentialite',
+    canonical: 'https://www.explorenorwayvan.com/politique-confidentialite',
   },
   robots: {
     index: false,

@@ -9,12 +9,12 @@ export const metadata: Metadata = {
   title: 'Itinéraire Norvège 10 Jours en Van : Circuit Complet',
   description: 'Itinéraire détaillé de 10 jours en Norvège en van aménagé. Jour par jour : distances, points d\'intérêt, spots pour dormir et conseils pratiques.',
   alternates: {
-    canonical: 'https://explorenorwayvan.com/itineraire-norvege-10-jours-van',
+    canonical: 'https://www.explorenorwayvan.com/itineraire-norvege-10-jours-van',
   },
   openGraph: {
     title: 'Itinéraire Norvège 10 Jours en Van : Circuit Complet',
     description: 'Circuit de 10 jours en Norvège en van : jour par jour, distances et conseils.',
-    url: 'https://explorenorwayvan.com/itineraire-norvege-10-jours-van',
+    url: 'https://www.explorenorwayvan.com/itineraire-norvege-10-jours-van',
   },
 };
 

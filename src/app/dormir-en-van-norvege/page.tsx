@@ -9,12 +9,12 @@ export const metadata: Metadata = {
   title: 'Dormir en Van en Norvège : Aires, Parkings et Spots',
   description: 'Où dormir en van en Norvège ? Découvrez les aires officielles, parkings autorisés et meilleurs spots pour passer la nuit en camping-car.',
   alternates: {
-    canonical: 'https://explorenorwayvan.com/dormir-en-van-norvege',
+    canonical: 'https://www.explorenorwayvan.com/dormir-en-van-norvege',
   },
   openGraph: {
     title: 'Dormir en Van en Norvège : Aires, Parkings et Spots',
     description: 'Où dormir en van en Norvège : aires officielles, parkings et spots.',
-    url: 'https://explorenorwayvan.com/dormir-en-van-norvege',
+    url: 'https://www.explorenorwayvan.com/dormir-en-van-norvege',
   },
 };
 

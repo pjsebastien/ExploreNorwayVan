@@ -17,7 +17,7 @@ export default function Breadcrumb({ items }: BreadcrumbProps) {
       '@type': 'ListItem',
       position: index + 1,
       name: item.name,
-      item: item.href ? `https://explorenorwayvan.com${item.href}` : undefined,
+      item: item.href ? `https://www.explorenorwayvan.com${item.href}` : undefined,
     })),
   };
 

@@ -8,12 +8,12 @@ export const metadata: Metadata = {
   title: 'Location van Norvège : Louer un van aménagé pour les fjords',
   description: 'Location van Norvège : découvrez comment louer un van aménagé pour explorer les fjords. Prix, itinéraires, conseils pratiques et meilleurs loueurs.',
   alternates: {
-    canonical: 'https://explorenorwayvan.com',
+    canonical: 'https://www.explorenorwayvan.com',
   },
   openGraph: {
     title: 'Location van Norvège : Louer un van aménagé pour les fjords',
     description: 'Location van Norvège : découvrez comment louer un van aménagé pour explorer les fjords. Prix, itinéraires, conseils pratiques et meilleurs loueurs.',
-    url: 'https://explorenorwayvan.com',
+    url: 'https://www.explorenorwayvan.com',
   },
 };
 
@@ -35,19 +35,19 @@ const schemaArticle = {
   author: {
     '@type': 'Organization',
     name: 'ExploreNorwayVan',
-    url: 'https://explorenorwayvan.com',
+    url: 'https://www.explorenorwayvan.com',
   },
   publisher: {
     '@type': 'Organization',
     name: 'ExploreNorwayVan',
     logo: {
       '@type': 'ImageObject',
-      url: 'https://explorenorwayvan.com/images/logo.png',
+      url: 'https://www.explorenorwayvan.com/images/logo.png',
     },
   },
   mainEntityOfPage: {
     '@type': 'WebPage',
-    '@id': 'https://explorenorwayvan.com',
+    '@id': 'https://www.explorenorwayvan.com',
   },
 };
 
