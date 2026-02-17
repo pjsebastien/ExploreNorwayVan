@@ -60,86 +60,156 @@ export default function HomePage() {
       />
 
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-rock-50 to-fjord-50 py-16 md:py-24">
-        <div className="container-custom">
+      <section className="relative min-h-[90vh] flex items-center overflow-hidden">
+        {/* Image de fond */}
+        <div className="absolute inset-0">
+          <Image
+            src="/images/van-face-fjords.jpg"
+            alt="Van aménagé face aux fjords en Norvège"
+            fill
+            priority
+            className="object-cover scale-105"
+            sizes="100vw"
+          />
+          {/* Overlay gradient amélioré */}
+          <div className="absolute inset-0 bg-gradient-to-r from-rock-950/95 via-rock-950/80 to-rock-950/40" />
+          <div className="absolute inset-0 bg-gradient-to-t from-rock-950/60 via-transparent to-transparent" />
+        </div>
+
+        {/* Éléments décoratifs */}
+        <div className="absolute top-20 right-10 w-72 h-72 bg-fjord-500/10 rounded-full blur-3xl" />
+        <div className="absolute bottom-20 left-10 w-96 h-96 bg-forest-500/10 rounded-full blur-3xl" />
+
+        {/* Contenu */}
+        <div className="container-custom relative z-10 py-20">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
-            {/* Texte */}
+            {/* Texte principal */}
             <div>
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold mb-6 leading-tight text-rock-900">
-                Louer un Van Aménagé en Norvège
+              {/* Badge de confiance */}
+              <div className="flex items-center gap-3 mb-6">
+                <span className="inline-flex items-center px-4 py-2 bg-white/10 backdrop-blur-sm border border-white/20 text-white text-sm font-medium rounded-full">
+                  <svg className="w-4 h-4 mr-2 text-forest-400" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                  </svg>
+                  Comparateur indépendant
+                </span>
+                <span className="inline-flex items-center px-3 py-1.5 bg-fjord-600 text-white text-sm font-semibold rounded-full">
+                  Dès 80€/jour
+                </span>
+              </div>
+
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold mb-6 leading-[1.1] text-white">
+                Location de van en{' '}
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-fjord-400 to-forest-400">
+                  Norvège
+                </span>
               </h1>
-              <p className="text-lg md:text-xl text-rock-600 mb-8 leading-relaxed">
-                Explorez les fjords spectaculaires, les routes panoramiques et la nature sauvage norvégienne
-                en toute liberté à bord de votre van aménagé.
+
+              <p className="text-lg md:text-xl text-rock-300 mb-8 leading-relaxed max-w-xl">
+                Comparez les meilleures offres de location de van aménagé et partez explorer les fjords, les routes panoramiques et la nature sauvage norvégienne.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 mb-8">
-                <Link href="#loueurs" className="btn-primary text-lg px-8 py-4">
-                  Trouver un van
+
+              {/* CTA Buttons */}
+              <div className="flex flex-col sm:flex-row gap-4 mb-10">
+                <Link
+                  href="#loueurs"
+                  className="group inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-fjord-600 to-fjord-700 text-white font-semibold rounded-xl hover:from-fjord-500 hover:to-fjord-600 transition-all duration-300 shadow-lg shadow-fjord-600/25 hover:shadow-xl hover:shadow-fjord-600/30"
+                >
+                  Comparer les offres
+                  <svg className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                  </svg>
                 </Link>
-                <Link href="#pourquoi-van-norvege" className="btn-outline text-lg px-8 py-4">
-                  En savoir plus
+                <Link
+                  href="#pourquoi-van-norvege"
+                  className="inline-flex items-center justify-center px-8 py-4 bg-white/10 backdrop-blur-sm border border-white/20 text-white font-semibold rounded-xl hover:bg-white/20 transition-all duration-300"
+                >
+                  Découvrir la Norvège
                 </Link>
               </div>
-              {/* Statistiques */}
-              <div className="flex flex-wrap gap-8 pt-6 border-t border-rock-200">
-                <div>
-                  <p className="text-3xl font-bold text-fjord-600">18</p>
-                  <p className="text-sm text-rock-500">Routes panoramiques</p>
+
+              {/* Trust indicators */}
+              <div className="flex items-center gap-6 pt-6 border-t border-white/10">
+                <div className="flex items-center gap-2">
+                  <div className="flex -space-x-2">
+                    <div className="w-8 h-8 rounded-full bg-gradient-to-br from-fjord-400 to-fjord-600 flex items-center justify-center text-white text-xs font-bold border-2 border-rock-950">Y</div>
+                    <div className="w-8 h-8 rounded-full bg-gradient-to-br from-forest-400 to-forest-600 flex items-center justify-center text-white text-xs font-bold border-2 border-rock-950">R</div>
+                    <div className="w-8 h-8 rounded-full bg-gradient-to-br from-rock-400 to-rock-600 flex items-center justify-center text-white text-xs font-bold border-2 border-rock-950">I</div>
+                  </div>
+                  <span className="text-rock-400 text-sm">+10 loueurs comparés</span>
                 </div>
-                <div>
-                  <p className="text-3xl font-bold text-forest-600">1000+</p>
-                  <p className="text-sm text-rock-500">Fjords à explorer</p>
-                </div>
-                <div>
-                  <p className="text-3xl font-bold text-fjord-600">100%</p>
-                  <p className="text-sm text-rock-500">Camping sauvage légal</p>
+                <div className="h-8 w-px bg-white/10" />
+                <div className="flex items-center gap-1.5">
+                  <div className="flex">
+                    {[...Array(5)].map((_, i) => (
+                      <svg key={i} className="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                      </svg>
+                    ))}
+                  </div>
+                  <span className="text-rock-400 text-sm">4.8/5 satisfaction</span>
                 </div>
               </div>
             </div>
 
-            {/* Grille d'images */}
-            <div className="grid grid-cols-2 gap-4">
-              <div className="space-y-4">
-                <div className="relative h-48 rounded-2xl overflow-hidden shadow-lg">
-                  <Image
-                    src="/images/van-face-fjords.jpg"
-                    alt="Van aménagé face aux fjords en Norvège"
-                    fill
-                    priority
-                    className="object-cover"
-                    sizes="(max-width: 768px) 50vw, 25vw"
-                  />
+            {/* Carte de statistiques */}
+            <div className="hidden lg:block">
+              <div className="bg-white/10 backdrop-blur-md border border-white/20 rounded-3xl p-8 shadow-2xl">
+                <h3 className="text-white font-display font-semibold text-xl mb-6">Pourquoi la Norvège en van ?</h3>
+                <div className="space-y-6">
+                  <div className="flex items-center gap-4">
+                    <div className="w-14 h-14 bg-gradient-to-br from-fjord-500/30 to-fjord-600/30 rounded-2xl flex items-center justify-center">
+                      <svg className="w-7 h-7 text-fjord-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7" />
+                      </svg>
+                    </div>
+                    <div>
+                      <p className="text-2xl font-bold text-white">18</p>
+                      <p className="text-rock-400 text-sm">Routes panoramiques nationales</p>
+                    </div>
+                  </div>
+                  <div className="flex items-center gap-4">
+                    <div className="w-14 h-14 bg-gradient-to-br from-forest-500/30 to-forest-600/30 rounded-2xl flex items-center justify-center">
+                      <svg className="w-7 h-7 text-forest-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                      </svg>
+                    </div>
+                    <div>
+                      <p className="text-2xl font-bold text-white">1 000+</p>
+                      <p className="text-rock-400 text-sm">Fjords à découvrir</p>
+                    </div>
+                  </div>
+                  <div className="flex items-center gap-4">
+                    <div className="w-14 h-14 bg-gradient-to-br from-yellow-500/30 to-orange-500/30 rounded-2xl flex items-center justify-center">
+                      <svg className="w-7 h-7 text-yellow-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                      </svg>
+                    </div>
+                    <div>
+                      <p className="text-2xl font-bold text-white">100%</p>
+                      <p className="text-rock-400 text-sm">Camping sauvage légal</p>
+                    </div>
+                  </div>
                 </div>
-                <div className="relative h-64 rounded-2xl overflow-hidden shadow-lg">
-                  <Image
-                    src="/images/route-sinueuse-van.jpg"
-                    alt="Route sinueuse en Norvège avec un van aménagé"
-                    fill
-                    className="object-cover"
-                    sizes="(max-width: 768px) 50vw, 25vw"
-                  />
+                <div className="mt-8 pt-6 border-t border-white/10">
+                  <p className="text-rock-400 text-sm flex items-center gap-2">
+                    <svg className="w-5 h-5 text-forest-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                    L&apos;Allemannsretten vous garantit le droit de camper librement
+                  </p>
                 </div>
               </div>
-              <div className="space-y-4 pt-8">
-                <div className="relative h-64 rounded-2xl overflow-hidden shadow-lg">
-                  <Image
-                    src="/images/paysage-fjord-van.jpg"
-                    alt="Paysage de fjord norvégien avec un van aménagé"
-                    fill
-                    className="object-cover"
-                    sizes="(max-width: 768px) 50vw, 25vw"
-                  />
-                </div>
-                <div className="relative h-48 rounded-2xl overflow-hidden shadow-lg">
-                  <Image
-                    src="/images/camping-van-nature.jpg"
-                    alt="Camping en van au cœur de la nature norvégienne"
-                    fill
-                    className="object-cover"
-                    sizes="(max-width: 768px) 50vw, 25vw"
-                  />
-                </div>
-              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Scroll indicator */}
+        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-10">
+          <div className="flex flex-col items-center gap-2 text-white/60">
+            <span className="text-xs uppercase tracking-wider">Découvrir</span>
+            <div className="w-6 h-10 border-2 border-white/30 rounded-full flex justify-center pt-2">
+              <div className="w-1.5 h-3 bg-white/60 rounded-full animate-bounce" />
             </div>
           </div>
         </div>
