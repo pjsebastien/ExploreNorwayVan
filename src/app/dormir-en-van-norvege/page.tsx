@@ -16,6 +16,7 @@ export const metadata: Metadata = {
     description: 'Où dormir en van en Norvège : aires officielles, parkings et spots.',
     url: 'https://www.explorenorwayvan.com/dormir-en-van-norvege/',
     type: 'article',
+    images: [{ url: '/images/og-image-norvege.jpg', width: 1200, height: 630, alt: 'Dormir en van en Norvège' }],
   },
 };
 

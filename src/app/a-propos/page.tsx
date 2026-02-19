@@ -13,6 +13,7 @@ export const metadata: Metadata = {
     description: 'Découvrez l\'équipe derrière ExploreNorwayVan et notre passion pour la Norvège en van.',
     url: 'https://www.explorenorwayvan.com/a-propos/',
     type: 'website',
+    images: [{ url: '/images/og-image-norvege.jpg', width: 1200, height: 630, alt: 'ExploreNorwayVan - Location van Norvège' }],
   },
 };
 

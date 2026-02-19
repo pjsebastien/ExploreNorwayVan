@@ -16,6 +16,7 @@ export const metadata: Metadata = {
     description: 'Circuit de 10 jours en Norvège en van : jour par jour, distances et conseils.',
     url: 'https://www.explorenorwayvan.com/itineraire-norvege-10-jours-van/',
     type: 'article',
+    images: [{ url: '/images/og-image-norvege.jpg', width: 1200, height: 630, alt: 'Itinéraire 10 jours en van en Norvège' }],
   },
 };
 

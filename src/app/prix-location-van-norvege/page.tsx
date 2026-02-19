@@ -15,6 +15,7 @@ export const metadata: Metadata = {
     description: 'Tarifs de location van en Norvège, assurances, caution et budget complet pour votre road trip.',
     url: 'https://www.explorenorwayvan.com/prix-location-van-norvege/',
     type: 'article',
+    images: [{ url: '/images/og-image-norvege.jpg', width: 1200, height: 630, alt: 'Prix location van Norvège' }],
   },
 };
 

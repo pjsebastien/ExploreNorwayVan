@@ -16,6 +16,7 @@ export const metadata: Metadata = {
     title: 'Location Van Bergen : La Porte des Fjords',
     description: 'Louez un van à Bergen et plongez immédiatement au cœur des fjords.',
     url: 'https://www.explorenorwayvan.com/location-van-bergen/',
+    images: [{ url: '/images/og-image-norvege.jpg', width: 1200, height: 630, alt: 'Location van Bergen Norvège' }],
   },
 };
 
@@ -28,7 +29,7 @@ const schemaArticle = {
   '@context': 'https://schema.org',
   '@type': 'Article',
   headline: 'Location Van Bergen : La Porte des Fjords',
-  description: 'Tout savoir pour louer un van à Bergen.',
+  description: 'Location de van à Bergen : loueurs, tarifs et pourquoi Bergen est le point de départ idéal pour explorer les fjords norvégiens en van.',
   image: 'https://www.explorenorwayvan.com/images/van-route-cotiere.jpg',
   datePublished: '2025-02-13',
   dateModified: '2026-02-19',

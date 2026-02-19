@@ -15,6 +15,7 @@ export const metadata: Metadata = {
     title: 'FAQ Location Van Norvège : Toutes vos Questions',
     description: 'Réponses aux questions fréquentes sur la location de van en Norvège.',
     url: 'https://www.explorenorwayvan.com/faq-location-van-norvege/',
+    images: [{ url: '/images/og-image-norvege.jpg', width: 1200, height: 630, alt: 'FAQ location van Norvège' }],
   },
 };
 

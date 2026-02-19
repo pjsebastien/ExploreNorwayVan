@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   title: 'Mentions Légales',
   description: 'Mentions légales du site ExploreNorwayVan.com - Informations sur l\'éditeur, l\'hébergeur et les conditions d\'utilisation.',
   alternates: {
-    canonical: 'https://www.explorenorwayvan.com/mentions-legales',
+    canonical: 'https://www.explorenorwayvan.com/mentions-legales/',
   },
   robots: {
     index: false,
@@ -35,7 +35,7 @@ export default function MentionsLegalesPage() {
       </section>
 
       <div className="container-custom">
-        <Breadcrumb items={breadcrumbItems} />
+        <Breadcrumb items={breadcrumbItems} currentPath="/mentions-legales/" />
       </div>
 
       <section className="section-padding bg-white">

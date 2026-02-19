@@ -14,7 +14,7 @@ export const metadata: Metadata = {
     title: 'Location van Norvège : Louer un van aménagé pour les fjords',
     description: 'Location van Norvège : découvrez comment louer un van aménagé pour explorer les fjords. Prix, itinéraires, conseils pratiques et meilleurs loueurs.',
     url: 'https://www.explorenorwayvan.com/',
-    type: 'article',
+    type: 'website',
   },
 };
 
@@ -28,30 +28,20 @@ const tocItems = [
   { id: 'faq', title: 'Questions fréquentes', level: 2 },
 ];
 
-const schemaArticle = {
+const schemaWebSite = {
   '@context': 'https://schema.org',
-  '@type': 'Article',
-  headline: 'Location van Norvège : Louer un van aménagé pour les fjords',
-  description: 'Tout savoir sur la location de van en Norvège. Découvrez les prix, itinéraires et conseils pour explorer les fjords en van aménagé.',
-  image: 'https://www.explorenorwayvan.com/images/og-image-norvege.jpg',
-  datePublished: '2025-02-13',
-  dateModified: '2026-02-19',
-  author: {
-    '@type': 'Organization',
-    name: 'ExploreNorwayVan',
-    url: 'https://www.explorenorwayvan.com',
-  },
+  '@type': 'WebSite',
+  name: 'ExploreNorwayVan',
+  url: 'https://www.explorenorwayvan.com/',
+  description: 'Guide indépendant pour la location de van en Norvège. Prix, itinéraires, conseils pratiques et comparatif des loueurs.',
   publisher: {
     '@type': 'Organization',
     name: 'ExploreNorwayVan',
+    url: 'https://www.explorenorwayvan.com',
     logo: {
       '@type': 'ImageObject',
       url: 'https://www.explorenorwayvan.com/images/logo.png',
     },
-  },
-  mainEntityOfPage: {
-    '@type': 'WebPage',
-    '@id': 'https://www.explorenorwayvan.com/',
   },
 };
 
@@ -60,7 +50,7 @@ export default function HomePage() {
     <>
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaArticle) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaWebSite) }}
       />
 
       {/* Hero Section */}
@@ -834,7 +824,7 @@ export default function HomePage() {
           <a
             href="https://www.yescapa.fr/campervan-hire/norvege?ae=620&aev=vanecosse"
             target="_blank"
-            rel="sponsored noopener"
+            rel="nofollow sponsored noopener"
             className="inline-flex items-center justify-center px-8 py-4 bg-white text-rock-900 font-semibold rounded-lg hover:bg-rock-100 transition-all duration-200 text-lg"
           >
             Trouver mon van idéal

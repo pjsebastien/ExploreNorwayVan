@@ -16,6 +16,7 @@ export const metadata: Metadata = {
     title: 'Camping Sauvage Norvège en Van : Règles et Conseils',
     description: 'Camping sauvage en Norvège : Allemannsretten, règles et meilleurs spots.',
     url: 'https://www.explorenorwayvan.com/camping-sauvage-norvege-van/',
+    images: [{ url: '/images/og-image-norvege.jpg', width: 1200, height: 630, alt: 'Camping sauvage en Norvège en van' }],
   },
 };
 

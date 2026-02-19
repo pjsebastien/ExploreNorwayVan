@@ -16,6 +16,7 @@ export const metadata: Metadata = {
     title: 'Location Van Oslo : Loueurs, Prix et Conseils',
     description: 'Tout savoir pour louer un van à Oslo : loueurs, tarifs et itinéraires.',
     url: 'https://www.explorenorwayvan.com/location-van-oslo/',
+    images: [{ url: '/images/og-image-norvege.jpg', width: 1200, height: 630, alt: 'Location van Oslo Norvège' }],
   },
 };
 
@@ -28,7 +29,7 @@ const schemaArticle = {
   '@context': 'https://schema.org',
   '@type': 'Article',
   headline: 'Location Van Oslo : Loueurs, Prix et Conseils',
-  description: 'Tout savoir pour louer un van à Oslo.',
+  description: 'Location de van à Oslo : meilleurs loueurs, tarifs par saison, conseils pratiques et itinéraires au départ de la capitale norvégienne.',
   image: 'https://www.explorenorwayvan.com/images/van-paysage-spectaculaire.jpg',
   datePublished: '2025-02-13',
   dateModified: '2026-02-19',

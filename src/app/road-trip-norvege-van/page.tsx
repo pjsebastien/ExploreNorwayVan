@@ -16,6 +16,7 @@ export const metadata: Metadata = {
     description: 'Organisez votre road trip en Norvège en van aménagé. Routes panoramiques, fjords et conseils pratiques.',
     url: 'https://www.explorenorwayvan.com/road-trip-norvege-van/',
     type: 'article',
+    images: [{ url: '/images/og-image-norvege.jpg', width: 1200, height: 630, alt: 'Road trip en van en Norvège' }],
   },
 };
 
