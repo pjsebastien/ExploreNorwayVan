@@ -9,7 +9,7 @@ interface BreadcrumbProps {
   items: BreadcrumbItem[];
 }
 
-export default function Breadcrumb({ items }: BreadcrumbProps) {
+export default function Breadcrumb({ items, currentPath }: BreadcrumbProps & { currentPath?: string }) {
   const schemaData = {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
@@ -17,7 +17,11 @@ export default function Breadcrumb({ items }: BreadcrumbProps) {
       '@type': 'ListItem',
       position: index + 1,
       name: item.name,
-      item: item.href ? `https://www.explorenorwayvan.com${item.href}` : undefined,
+      item: item.href
+        ? `https://www.explorenorwayvan.com${item.href}`
+        : currentPath
+          ? `https://www.explorenorwayvan.com${currentPath}`
+          : undefined,
     })),
   };
 
@@ -32,7 +36,7 @@ export default function Breadcrumb({ items }: BreadcrumbProps) {
           {items.map((item, index) => (
             <li key={index} className="flex items-center">
               {index > 0 && (
-                <svg className="w-4 h-4 mx-2 text-rock-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <svg aria-hidden="true" className="w-4 h-4 mx-2 text-rock-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                 </svg>
               )}

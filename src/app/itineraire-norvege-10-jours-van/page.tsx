@@ -6,15 +6,16 @@ import AffiliateCTA from '@/components/AffiliateCTA';
 import Hero from '@/components/Hero';
 
 export const metadata: Metadata = {
-  title: 'Itinéraire Norvège 10 Jours en Van : Circuit Complet',
+  title: 'Itinéraire Norvège 10 Jours en Van',
   description: 'Itinéraire détaillé de 10 jours en Norvège en van aménagé. Jour par jour : distances, points d\'intérêt, spots pour dormir et conseils pratiques.',
   alternates: {
-    canonical: 'https://www.explorenorwayvan.com/itineraire-norvege-10-jours-van',
+    canonical: 'https://www.explorenorwayvan.com/itineraire-norvege-10-jours-van/',
   },
   openGraph: {
-    title: 'Itinéraire Norvège 10 Jours en Van : Circuit Complet',
+    title: 'Itinéraire Norvège 10 Jours en Van',
     description: 'Circuit de 10 jours en Norvège en van : jour par jour, distances et conseils.',
-    url: 'https://www.explorenorwayvan.com/itineraire-norvege-10-jours-van',
+    url: 'https://www.explorenorwayvan.com/itineraire-norvege-10-jours-van/',
+    type: 'article',
   },
 };
 
@@ -28,8 +29,12 @@ const schemaArticle = {
   '@type': 'Article',
   headline: 'Itinéraire Norvège 10 Jours en Van : Circuit Complet',
   description: 'Itinéraire détaillé de 10 jours en Norvège en van aménagé.',
-  author: { '@type': 'Organization', name: 'ExploreNorwayVan' },
-  publisher: { '@type': 'Organization', name: 'ExploreNorwayVan' },
+  image: 'https://www.explorenorwayvan.com/images/og-image-norvege.jpg',
+  datePublished: '2025-02-13',
+  dateModified: '2026-02-19',
+  author: { '@type': 'Organization', name: 'ExploreNorwayVan', url: 'https://www.explorenorwayvan.com' },
+  publisher: { '@type': 'Organization', name: 'ExploreNorwayVan', logo: { '@type': 'ImageObject', url: 'https://www.explorenorwayvan.com/images/logo.png' } },
+  mainEntityOfPage: { '@type': 'WebPage', '@id': 'https://www.explorenorwayvan.com/itineraire-norvege-10-jours-van/' },
 };
 
 const itinerary = [
@@ -142,7 +147,7 @@ export default function ItinerairePage() {
       />
 
       <div className="container-custom">
-        <Breadcrumb items={breadcrumbItems} />
+        <Breadcrumb items={breadcrumbItems} currentPath="/itineraire-norvege-10-jours-van/" />
       </div>
 
       {/* Résumé */}

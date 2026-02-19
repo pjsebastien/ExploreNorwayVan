@@ -6,15 +6,16 @@ import AffiliateCTA from '@/components/AffiliateCTA';
 import Hero from '@/components/Hero';
 
 export const metadata: Metadata = {
-  title: 'Camping Sauvage en Norvège en Van : Règles et Conseils',
+  title: 'Camping Sauvage Norvège en Van : Règles et Conseils',
   description: 'Camping sauvage en Norvège en van : Allemannsretten, règles à respecter, meilleurs spots et conseils pratiques pour camper en liberté.',
   alternates: {
-    canonical: 'https://www.explorenorwayvan.com/camping-sauvage-norvege-van',
+    canonical: 'https://www.explorenorwayvan.com/camping-sauvage-norvege-van/',
   },
   openGraph: {
-    title: 'Camping Sauvage en Norvège en Van : Règles et Conseils',
+    type: 'article',
+    title: 'Camping Sauvage Norvège en Van : Règles et Conseils',
     description: 'Camping sauvage en Norvège : Allemannsretten, règles et meilleurs spots.',
-    url: 'https://www.explorenorwayvan.com/camping-sauvage-norvege-van',
+    url: 'https://www.explorenorwayvan.com/camping-sauvage-norvege-van/',
   },
 };
 
@@ -28,8 +29,12 @@ const schemaArticle = {
   '@type': 'Article',
   headline: 'Camping Sauvage en Norvège en Van : Règles et Conseils',
   description: 'Tout savoir sur le camping sauvage en Norvège en van aménagé.',
-  author: { '@type': 'Organization', name: 'ExploreNorwayVan' },
-  publisher: { '@type': 'Organization', name: 'ExploreNorwayVan' },
+  image: 'https://www.explorenorwayvan.com/images/van-paysage-spectaculaire.jpg',
+  datePublished: '2025-02-13',
+  dateModified: '2026-02-19',
+  author: { '@type': 'Organization', name: 'ExploreNorwayVan', url: 'https://www.explorenorwayvan.com' },
+  publisher: { '@type': 'Organization', name: 'ExploreNorwayVan', logo: { '@type': 'ImageObject', url: 'https://www.explorenorwayvan.com/images/logo.png' } },
+  mainEntityOfPage: { '@type': 'WebPage', '@id': 'https://www.explorenorwayvan.com/camping-sauvage-norvege-van/' },
 };
 
 export default function CampingSauvagePage() {
@@ -49,7 +54,7 @@ export default function CampingSauvagePage() {
       />
 
       <div className="container-custom">
-        <Breadcrumb items={breadcrumbItems} />
+        <Breadcrumb items={breadcrumbItems} currentPath="/camping-sauvage-norvege-van/" />
       </div>
 
       {/* Introduction */}

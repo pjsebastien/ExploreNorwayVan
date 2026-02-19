@@ -9,12 +9,13 @@ export const metadata: Metadata = {
   title: 'Dormir en Van en Norvège : Aires, Parkings et Spots',
   description: 'Où dormir en van en Norvège ? Découvrez les aires officielles, parkings autorisés et meilleurs spots pour passer la nuit en camping-car.',
   alternates: {
-    canonical: 'https://www.explorenorwayvan.com/dormir-en-van-norvege',
+    canonical: 'https://www.explorenorwayvan.com/dormir-en-van-norvege/',
   },
   openGraph: {
     title: 'Dormir en Van en Norvège : Aires, Parkings et Spots',
     description: 'Où dormir en van en Norvège : aires officielles, parkings et spots.',
-    url: 'https://www.explorenorwayvan.com/dormir-en-van-norvege',
+    url: 'https://www.explorenorwayvan.com/dormir-en-van-norvege/',
+    type: 'article',
   },
 };
 
@@ -28,8 +29,12 @@ const schemaArticle = {
   '@type': 'Article',
   headline: 'Dormir en Van en Norvège : Aires, Parkings et Spots',
   description: 'Où dormir en van en Norvège : aires officielles, parkings et spots.',
-  author: { '@type': 'Organization', name: 'ExploreNorwayVan' },
-  publisher: { '@type': 'Organization', name: 'ExploreNorwayVan' },
+  image: 'https://www.explorenorwayvan.com/images/paysage-fjord-van.jpg',
+  datePublished: '2025-02-13',
+  dateModified: '2026-02-19',
+  author: { '@type': 'Organization', name: 'ExploreNorwayVan', url: 'https://www.explorenorwayvan.com' },
+  publisher: { '@type': 'Organization', name: 'ExploreNorwayVan', logo: { '@type': 'ImageObject', url: 'https://www.explorenorwayvan.com/images/logo.png' } },
+  mainEntityOfPage: { '@type': 'WebPage', '@id': 'https://www.explorenorwayvan.com/dormir-en-van-norvege/' },
 };
 
 export default function DormirVanPage() {
@@ -49,7 +54,7 @@ export default function DormirVanPage() {
       />
 
       <div className="container-custom">
-        <Breadcrumb items={breadcrumbItems} />
+        <Breadcrumb items={breadcrumbItems} currentPath="/dormir-en-van-norvege/" />
       </div>
 
       {/* Introduction */}

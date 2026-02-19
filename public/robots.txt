@@ -3,4 +3,4 @@ Allow: /
 Disallow: /api/
 Disallow: /admin/
 
-Sitemap: https://explorenorwayvan.com/sitemap.xml
+Sitemap: https://www.explorenorwayvan.com/sitemap.xml

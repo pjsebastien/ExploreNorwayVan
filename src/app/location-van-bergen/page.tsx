@@ -9,12 +9,13 @@ export const metadata: Metadata = {
   title: 'Location Van Bergen : La Porte des Fjords',
   description: 'Location de van à Bergen : découvrez les loueurs, les tarifs et pourquoi Bergen est le point de départ idéal pour explorer les fjords norvégiens.',
   alternates: {
-    canonical: 'https://www.explorenorwayvan.com/location-van-bergen',
+    canonical: 'https://www.explorenorwayvan.com/location-van-bergen/',
   },
   openGraph: {
+    type: 'article',
     title: 'Location Van Bergen : La Porte des Fjords',
     description: 'Louez un van à Bergen et plongez immédiatement au cœur des fjords.',
-    url: 'https://www.explorenorwayvan.com/location-van-bergen',
+    url: 'https://www.explorenorwayvan.com/location-van-bergen/',
   },
 };
 
@@ -28,8 +29,12 @@ const schemaArticle = {
   '@type': 'Article',
   headline: 'Location Van Bergen : La Porte des Fjords',
   description: 'Tout savoir pour louer un van à Bergen.',
-  author: { '@type': 'Organization', name: 'ExploreNorwayVan' },
-  publisher: { '@type': 'Organization', name: 'ExploreNorwayVan' },
+  image: 'https://www.explorenorwayvan.com/images/van-route-cotiere.jpg',
+  datePublished: '2025-02-13',
+  dateModified: '2026-02-19',
+  author: { '@type': 'Organization', name: 'ExploreNorwayVan', url: 'https://www.explorenorwayvan.com' },
+  publisher: { '@type': 'Organization', name: 'ExploreNorwayVan', logo: { '@type': 'ImageObject', url: 'https://www.explorenorwayvan.com/images/logo.png' } },
+  mainEntityOfPage: { '@type': 'WebPage', '@id': 'https://www.explorenorwayvan.com/location-van-bergen/' },
 };
 
 export default function LocationBergenPage() {
@@ -49,7 +54,7 @@ export default function LocationBergenPage() {
       />
 
       <div className="container-custom">
-        <Breadcrumb items={breadcrumbItems} />
+        <Breadcrumb items={breadcrumbItems} currentPath="/location-van-bergen/" />
       </div>
 
       {/* Introduction */}

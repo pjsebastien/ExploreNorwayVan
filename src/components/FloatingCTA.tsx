@@ -42,7 +42,7 @@ export default function FloatingCTA() {
               </div>
             </div>
             <a
-              href="#"
+              href="https://www.yescapa.fr/campervan-hire/norvege?ae=620&aev=vanecosse"
               target="_blank"
               rel="nofollow sponsored noopener"
               className="flex items-center justify-center w-full px-4 py-2.5 bg-white text-fjord-700 font-semibold rounded-lg hover:bg-fjord-50 transition-all duration-200 text-sm"
@@ -52,6 +52,7 @@ export default function FloatingCTA() {
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
               </svg>
             </a>
+            <p className="text-fjord-200 text-xs mt-2 text-center">Lien partenaire</p>
           </div>
         </div>
       ) : (

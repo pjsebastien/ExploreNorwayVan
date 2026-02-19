@@ -9,12 +9,13 @@ export const metadata: Metadata = {
   title: 'Road Trip Norvège en Van : Les plus belles routes',
   description: 'Organisez votre road trip en Norvège en van aménagé. Découvrez les routes panoramiques, les fjords incontournables et nos conseils pratiques.',
   alternates: {
-    canonical: 'https://www.explorenorwayvan.com/road-trip-norvege-van',
+    canonical: 'https://www.explorenorwayvan.com/road-trip-norvege-van/',
   },
   openGraph: {
     title: 'Road Trip Norvège en Van : Les plus belles routes',
     description: 'Organisez votre road trip en Norvège en van aménagé. Routes panoramiques, fjords et conseils pratiques.',
-    url: 'https://www.explorenorwayvan.com/road-trip-norvege-van',
+    url: 'https://www.explorenorwayvan.com/road-trip-norvege-van/',
+    type: 'article',
   },
 };
 
@@ -28,14 +29,12 @@ const schemaArticle = {
   '@type': 'Article',
   headline: 'Road Trip Norvège en Van : Les plus belles routes',
   description: 'Tout savoir pour organiser votre road trip en Norvège en van aménagé.',
-  author: {
-    '@type': 'Organization',
-    name: 'ExploreNorwayVan',
-  },
-  publisher: {
-    '@type': 'Organization',
-    name: 'ExploreNorwayVan',
-  },
+  image: 'https://www.explorenorwayvan.com/images/roadtrip-route-panoramique.jpg',
+  datePublished: '2025-02-13',
+  dateModified: '2026-02-19',
+  author: { '@type': 'Organization', name: 'ExploreNorwayVan', url: 'https://www.explorenorwayvan.com' },
+  publisher: { '@type': 'Organization', name: 'ExploreNorwayVan', logo: { '@type': 'ImageObject', url: 'https://www.explorenorwayvan.com/images/logo.png' } },
+  mainEntityOfPage: { '@type': 'WebPage', '@id': 'https://www.explorenorwayvan.com/road-trip-norvege-van/' },
 };
 
 export default function RoadTripNorvegePage() {
@@ -55,7 +54,7 @@ export default function RoadTripNorvegePage() {
       />
 
       <div className="container-custom">
-        <Breadcrumb items={breadcrumbItems} />
+        <Breadcrumb items={breadcrumbItems} currentPath="/road-trip-norvege-van/" />
       </div>
 
       {/* Introduction */}

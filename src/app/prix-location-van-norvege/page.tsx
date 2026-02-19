@@ -5,15 +5,16 @@ import AffiliateCTA from '@/components/AffiliateCTA';
 import Hero from '@/components/Hero';
 
 export const metadata: Metadata = {
-  title: 'Prix Location Van Norvège : Tarifs et Budget Complet',
+  title: 'Prix Location Van Norvège : Tarifs et Budget',
   description: 'Découvrez les prix de location de van en Norvège : tarifs par saison, assurances, caution, péages et ferries. Budget complet pour votre road trip.',
   alternates: {
-    canonical: 'https://www.explorenorwayvan.com/prix-location-van-norvege',
+    canonical: 'https://www.explorenorwayvan.com/prix-location-van-norvege/',
   },
   openGraph: {
-    title: 'Prix Location Van Norvège : Tarifs et Budget Complet',
+    title: 'Prix Location Van Norvège : Tarifs et Budget',
     description: 'Tarifs de location van en Norvège, assurances, caution et budget complet pour votre road trip.',
-    url: 'https://www.explorenorwayvan.com/prix-location-van-norvege',
+    url: 'https://www.explorenorwayvan.com/prix-location-van-norvege/',
+    type: 'article',
   },
 };
 
@@ -27,8 +28,12 @@ const schemaArticle = {
   '@type': 'Article',
   headline: 'Prix Location Van Norvège : Tarifs et Budget Complet',
   description: 'Tout savoir sur les prix de location de van en Norvège avec budget détaillé.',
-  author: { '@type': 'Organization', name: 'ExploreNorwayVan' },
-  publisher: { '@type': 'Organization', name: 'ExploreNorwayVan' },
+  image: 'https://www.explorenorwayvan.com/images/van-face-fjords.jpg',
+  datePublished: '2025-02-13',
+  dateModified: '2026-02-19',
+  author: { '@type': 'Organization', name: 'ExploreNorwayVan', url: 'https://www.explorenorwayvan.com' },
+  publisher: { '@type': 'Organization', name: 'ExploreNorwayVan', logo: { '@type': 'ImageObject', url: 'https://www.explorenorwayvan.com/images/logo.png' } },
+  mainEntityOfPage: { '@type': 'WebPage', '@id': 'https://www.explorenorwayvan.com/prix-location-van-norvege/' },
 };
 
 export default function PrixLocationPage() {
@@ -48,7 +53,7 @@ export default function PrixLocationPage() {
       />
 
       <div className="container-custom">
-        <Breadcrumb items={breadcrumbItems} />
+        <Breadcrumb items={breadcrumbItems} currentPath="/prix-location-van-norvege/" />
       </div>
 
       {/* Introduction */}
@@ -58,8 +63,7 @@ export default function PrixLocationPage() {
             <p className="text-lg">
               Comprendre les <strong>prix de location de van en Norvège</strong> est essentiel pour bien
               préparer votre budget voyage. Entre le coût du véhicule, les assurances, le carburant, les
-              ferries et les péages, les dépenses peuvent vite s&apos;accumuler. Voici comment
-              aide à anticiper tous les coûts pour éviter les mauvaises surprises.
+              ferries et les péages, les dépenses peuvent vite s&apos;accumuler. Voici notre guide complet pour anticiper tous les coûts et éviter les mauvaises surprises.
             </p>
             <p>
               La bonne nouvelle : malgré la réputation de la Norvège comme destination chère, voyager en

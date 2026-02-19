@@ -65,8 +65,7 @@ export default function Header() {
                 </svg>
               </button>
 
-              {citiesOpen && (
-                <div className="absolute top-full left-0 mt-1 w-40 bg-white rounded-lg shadow-lg py-2 border border-rock-100">
+                <div className={`absolute top-full left-0 mt-1 w-40 bg-white rounded-lg shadow-lg py-2 border border-rock-100 ${citiesOpen ? 'block' : 'hidden'}`}>
                   {cities.map((city) => (
                     <Link
                       key={city.name}
@@ -78,7 +77,6 @@ export default function Header() {
                     </Link>
                   ))}
                 </div>
-              )}
             </div>
 
             {navigation.slice(4).map((item) => (
@@ -119,9 +117,8 @@ export default function Header() {
           </button>
         </div>
 
-        {/* Mobile Navigation */}
-        {mobileMenuOpen && (
-          <div className="lg:hidden py-4 border-t border-rock-100">
+        {/* Mobile Navigation - always in DOM for crawlers, visibility toggled via CSS */}
+        <div className={`lg:hidden py-4 border-t border-rock-100 ${mobileMenuOpen ? 'block' : 'hidden'}`}>
             <div className="space-y-1">
               {navigation.map((item) => (
                 <Link
@@ -157,7 +154,6 @@ export default function Header() {
               </div>
             </div>
           </div>
-        )}
       </nav>
     </header>
   );

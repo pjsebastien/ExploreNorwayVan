@@ -9,12 +9,13 @@ export const metadata: Metadata = {
   title: 'Location Van Oslo : Loueurs, Prix et Conseils',
   description: 'Location de van à Oslo : découvrez les meilleurs loueurs, les tarifs, les conseils pratiques et les itinéraires au départ de la capitale norvégienne.',
   alternates: {
-    canonical: 'https://www.explorenorwayvan.com/location-van-oslo',
+    canonical: 'https://www.explorenorwayvan.com/location-van-oslo/',
   },
   openGraph: {
+    type: 'article',
     title: 'Location Van Oslo : Loueurs, Prix et Conseils',
     description: 'Tout savoir pour louer un van à Oslo : loueurs, tarifs et itinéraires.',
-    url: 'https://www.explorenorwayvan.com/location-van-oslo',
+    url: 'https://www.explorenorwayvan.com/location-van-oslo/',
   },
 };
 
@@ -28,8 +29,12 @@ const schemaArticle = {
   '@type': 'Article',
   headline: 'Location Van Oslo : Loueurs, Prix et Conseils',
   description: 'Tout savoir pour louer un van à Oslo.',
-  author: { '@type': 'Organization', name: 'ExploreNorwayVan' },
-  publisher: { '@type': 'Organization', name: 'ExploreNorwayVan' },
+  image: 'https://www.explorenorwayvan.com/images/van-paysage-spectaculaire.jpg',
+  datePublished: '2025-02-13',
+  dateModified: '2026-02-19',
+  author: { '@type': 'Organization', name: 'ExploreNorwayVan', url: 'https://www.explorenorwayvan.com' },
+  publisher: { '@type': 'Organization', name: 'ExploreNorwayVan', logo: { '@type': 'ImageObject', url: 'https://www.explorenorwayvan.com/images/logo.png' } },
+  mainEntityOfPage: { '@type': 'WebPage', '@id': 'https://www.explorenorwayvan.com/location-van-oslo/' },
 };
 
 export default function LocationOsloPage() {
@@ -49,7 +54,7 @@ export default function LocationOsloPage() {
       />
 
       <div className="container-custom">
-        <Breadcrumb items={breadcrumbItems} />
+        <Breadcrumb items={breadcrumbItems} currentPath="/location-van-oslo/" />
       </div>
 
       {/* Introduction */}

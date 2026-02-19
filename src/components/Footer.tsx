@@ -37,7 +37,7 @@ export default function Footer() {
           </div>
 
           {/* Guides */}
-          <div>
+          <nav aria-label="Guides">
             <h3 className="font-display font-semibold text-lg mb-4">Guides</h3>
             <ul className="space-y-3">
               {footerNavigation.guides.map((item) => (
@@ -51,10 +51,10 @@ export default function Footer() {
                 </li>
               ))}
             </ul>
-          </div>
+          </nav>
 
           {/* Pratique */}
-          <div>
+          <nav aria-label="Pratique">
             <h3 className="font-display font-semibold text-lg mb-4">Pratique</h3>
             <ul className="space-y-3">
               {footerNavigation.pratique.map((item) => (
@@ -68,7 +68,7 @@ export default function Footer() {
                 </li>
               ))}
             </ul>
-          </div>
+          </nav>
         </div>
 
         {/* Bottom */}
@@ -78,6 +78,9 @@ export default function Footer() {
               © {new Date().getFullYear()} ExploreNorwayVan.com - Tous droits réservés
             </p>
             <div className="flex space-x-6 text-sm">
+              <Link href="/a-propos" className="text-rock-400 hover:text-white transition-colors">
+                À propos
+              </Link>
               <Link href="/mentions-legales" className="text-rock-400 hover:text-white transition-colors">
                 Mentions légales
               </Link>

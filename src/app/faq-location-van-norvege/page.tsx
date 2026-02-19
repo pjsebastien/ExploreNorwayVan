@@ -8,12 +8,13 @@ export const metadata: Metadata = {
   title: 'FAQ Location Van Norvège : Toutes vos Questions',
   description: 'Toutes les réponses à vos questions sur la location de van en Norvège : permis, assurance, camping sauvage, budget, meilleure période et plus encore.',
   alternates: {
-    canonical: 'https://www.explorenorwayvan.com/faq-location-van-norvege',
+    canonical: 'https://www.explorenorwayvan.com/faq-location-van-norvege/',
   },
   openGraph: {
+    type: 'article',
     title: 'FAQ Location Van Norvège : Toutes vos Questions',
     description: 'Réponses aux questions fréquentes sur la location de van en Norvège.',
-    url: 'https://www.explorenorwayvan.com/faq-location-van-norvege',
+    url: 'https://www.explorenorwayvan.com/faq-location-van-norvege/',
   },
 };
 
@@ -116,7 +117,7 @@ export default function FAQPage() {
       />
 
       <div className="container-custom">
-        <Breadcrumb items={breadcrumbItems} />
+        <Breadcrumb items={breadcrumbItems} currentPath="/faq-location-van-norvege/" />
       </div>
 
       {/* FAQ */}

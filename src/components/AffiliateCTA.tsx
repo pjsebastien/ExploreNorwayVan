@@ -11,7 +11,7 @@ export default function AffiliateCTA({
   title = "Trouvez votre van idéal",
   description = "Comparez les meilleures offres de location de van en Norvège et réservez en quelques clics.",
   buttonText = "Voir les offres",
-  href = "#",
+  href = "https://www.yescapa.fr/campervan-hire/norvege?ae=620&aev=vanecosse",
   variant = 'primary',
   className = '',
 }: AffiliateCTAProps) {
@@ -35,6 +35,7 @@ export default function AffiliateCTA({
             </svg>
           </a>
         </div>
+        <p className="text-rock-500 text-xs mt-3">Lien partenaire</p>
       </div>
     );
   }
@@ -56,6 +57,9 @@ export default function AffiliateCTA({
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
             </svg>
           </a>
+          <p className="text-forest-200 text-sm mt-4">
+            Lien partenaire - Nous percevons une commission sur les réservations
+          </p>
         </div>
       </div>
     );
