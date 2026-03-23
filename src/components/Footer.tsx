@@ -1,4 +1,8 @@
+'use client';
+
 import Link from 'next/link';
+import { useEffect, useState } from 'react';
+import { getAllCities, type City } from '@/lib/cities';
 
 const footerNavigation = {
   guides: [
@@ -6,16 +10,19 @@ const footerNavigation = {
     { name: 'Itinéraire 10 jours', href: '/itineraire-norvege-10-jours-van' },
     { name: 'Prix location van', href: '/prix-location-van-norvege' },
     { name: 'Dormir en van', href: '/dormir-en-van-norvege' },
-  ],
-  pratique: [
-    { name: 'Camping sauvage', href: '/camping-sauvage-norvege-van' },
-    { name: 'Location van Oslo', href: '/location-van-oslo' },
-    { name: 'Location van Bergen', href: '/location-van-bergen' },
-    { name: 'FAQ', href: '/faq-location-van-norvege' },
+    { name: 'Blog', href: '/blog' },
   ],
 };
 
 export default function Footer() {
+  const [publishedCities, setPublishedCities] = useState<City[]>([]);
+
+  useEffect(() => {
+    const now = new Date();
+    const cities = getAllCities().filter((c) => new Date(c.publishedAt) <= now);
+    setPublishedCities(cities);
+  }, []);
+
   return (
     <footer className="bg-rock-900 text-white">
       <div className="container-custom py-12 lg:py-16">
@@ -31,7 +38,7 @@ export default function Footer() {
               <span className="font-display font-semibold text-xl">ExploreNorwayVan</span>
             </Link>
             <p className="text-rock-300 max-w-md leading-relaxed">
-              Votre guide complet pour la location de van en Norvège. Découvrez les fjords,
+              Votre guide complet pour la location de van en Norvège. Parcourez les fjords,
               les routes panoramiques et la nature sauvage norvégienne en toute liberté.
             </p>
           </div>
@@ -53,20 +60,36 @@ export default function Footer() {
             </ul>
           </nav>
 
-          {/* Pratique */}
+          {/* Pratique + Villes */}
           <nav aria-label="Pratique">
-            <h3 className="font-display font-semibold text-lg mb-4">Pratique</h3>
+            <h3 className="font-display font-semibold text-lg mb-4">Location de van</h3>
             <ul className="space-y-3">
-              {footerNavigation.pratique.map((item) => (
-                <li key={item.name}>
+              {publishedCities.map((city) => (
+                <li key={city.slug}>
                   <Link
-                    href={item.href}
+                    href={city.href}
                     className="text-rock-300 hover:text-white transition-colors"
                   >
-                    {item.name}
+                    Location van {city.name}
                   </Link>
                 </li>
               ))}
+              <li>
+                <Link
+                  href="/camping-sauvage-norvege-van"
+                  className="text-rock-300 hover:text-white transition-colors"
+                >
+                  Camping sauvage
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/faq-location-van-norvege"
+                  className="text-rock-300 hover:text-white transition-colors"
+                >
+                  FAQ
+                </Link>
+              </li>
             </ul>
           </nav>
         </div>

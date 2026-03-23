@@ -1,15 +1,12 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  // Export statique pour un site 100% SSG
-  output: 'export',
-
-  // Optimisation des images pour export statique
+  // Images non optimisées (pas de serveur d'images)
   images: {
     unoptimized: true,
   },
 
-  // Trailing slashes pour compatibilité hébergement statique
+  // Trailing slashes pour compatibilité SEO
   trailingSlash: true,
 };
 

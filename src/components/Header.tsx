@@ -2,7 +2,8 @@
 
 import Link from 'next/link';
 import Image from 'next/image';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
+import { getAllCities, type City } from '@/lib/cities';
 
 const navigation = [
   { name: 'Accueil', href: '/' },
@@ -11,17 +12,20 @@ const navigation = [
   { name: 'Prix', href: '/prix-location-van-norvege' },
   { name: 'Dormir en van', href: '/dormir-en-van-norvege' },
   { name: 'Camping sauvage', href: '/camping-sauvage-norvege-van' },
+  { name: 'Blog', href: '/blog' },
   { name: 'FAQ', href: '/faq-location-van-norvege' },
-];
-
-const cities = [
-  { name: 'Oslo', href: '/location-van-oslo' },
-  { name: 'Bergen', href: '/location-van-bergen' },
 ];
 
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [citiesOpen, setCitiesOpen] = useState(false);
+  const [publishedCities, setPublishedCities] = useState<City[]>([]);
+
+  useEffect(() => {
+    const now = new Date();
+    const cities = getAllCities().filter((c) => new Date(c.publishedAt) <= now);
+    setPublishedCities(cities);
+  }, []);
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm shadow-sm">
@@ -65,10 +69,10 @@ export default function Header() {
                 </svg>
               </button>
 
-                <div className={`absolute top-full left-0 mt-1 w-40 bg-white rounded-lg shadow-lg py-2 border border-rock-100 ${citiesOpen ? 'block' : 'hidden'}`}>
-                  {cities.map((city) => (
+                <div className={`absolute top-full left-0 mt-1 w-48 bg-white rounded-lg shadow-lg py-2 border border-rock-100 ${citiesOpen ? 'block' : 'hidden'}`}>
+                  {publishedCities.map((city) => (
                     <Link
-                      key={city.name}
+                      key={city.slug}
                       href={city.href}
                       className="block px-4 py-2 text-sm text-rock-600 hover:text-fjord-600 hover:bg-fjord-50"
                       onClick={() => setCitiesOpen(false)}
@@ -117,7 +121,7 @@ export default function Header() {
           </button>
         </div>
 
-        {/* Mobile Navigation - always in DOM for crawlers, visibility toggled via CSS */}
+        {/* Mobile Navigation */}
         <div className={`lg:hidden py-4 border-t border-rock-100 ${mobileMenuOpen ? 'block' : 'hidden'}`}>
             <div className="space-y-1">
               {navigation.map((item) => (
@@ -132,9 +136,9 @@ export default function Header() {
               ))}
               <div className="pt-2 border-t border-rock-100 mt-2">
                 <p className="px-4 py-2 text-sm font-semibold text-rock-400 uppercase tracking-wide">Villes</p>
-                {cities.map((city) => (
+                {publishedCities.map((city) => (
                   <Link
-                    key={city.name}
+                    key={city.slug}
                     href={city.href}
                     className="block px-4 py-2 text-base font-medium text-rock-600 hover:text-fjord-600 hover:bg-fjord-50 rounded-lg"
                     onClick={() => setMobileMenuOpen(false)}
